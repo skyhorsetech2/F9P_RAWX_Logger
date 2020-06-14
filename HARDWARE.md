@@ -86,12 +86,12 @@ Note: In this Sky Horse version, pushing the Stop Logging momentary button close
 
 Update made to restart the logging after stop button pressed, if you'd like to just stop logging completely revert back to prior code:
         ```
-        if ((stop_pressed == true) or (vbat < LOWBAT)) {  &nbsp;
-          //loop_step = close_file; // now close the file - previous code commented out by Sky Horse  &nbsp;
-          loop_step = restart_file; //close file and reopen new one - added by Sky Horse  &nbsp;
-          stop_pressed = false; //custom Sky Horse  &nbsp;
-          break;  &nbsp;
-        }  &nbsp;
+        if ((stop_pressed == true) or (vbat < LOWBAT)) { <br/>
+          //loop_step = close_file; // now close the file - previous code commented out by Sky Horse  <br/>
+          loop_step = restart_file; //close file and reopen new one - added by Sky Horse  <br/>
+          stop_pressed = false; //custom Sky Horse  <br/>
+          break;  <br/>
+        }  <br/>
         ```
         
 ## Waypoint / Timestamp Event
