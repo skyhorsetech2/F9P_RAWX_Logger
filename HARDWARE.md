@@ -69,18 +69,27 @@ Connect the Adalogger A0 pin to GND to put the logger into base mode. Leave A0 f
 - The F9P navigation engine dynamic model is set to "airborne <1g" for the rover and "stationary" for the base
 - (The dynamic models can be changed by editing the Arduino code)
 
-![Extras](https://github.com/PaulZC/F9P_RAWX_Logger/blob/master/img/Extras.JPG)
+![Extras](https://github.com/SkyHorseTech/F9P_RAWX_Logger/blob/master/img/ExtrasWithLCD2.jpg)
 
 The logger also supports Survey_In mode where the ZED-F9P calculates its own position and then generates RTCM 3 correction messages on the UART2 TX2 pin.
 If you want to use Survey_In, connect pin A3 to GND. You will need to have A0 connected to ground too. The green LED will flash (or the NeoPixel will turn magenta)
-when the ZED-F9P has established a TIME solution. The RTCM messages are output at 115200 Baud, which is the default Baud rate of the SparkFun Bluetooth Mate.
+when the ZED-F9P has established a TIME solution. The RTCM messages are output at 115200 Baud, which is the default Baud rate of the SparkFun Bluetooth Mate. 
+For the addition of an LCD screen (Sky Horse used SparkFun 20x4 SerLCD - Black on RGB 3.3V) you can connect using one of the two I2C ports. If your LCD screen does not have an existing I2C port you can solder one on like we did (SparkFun Qwiic Adapter).
 
 ## Stopping the Logger
 
 If you are powering the logger from a LiPo battery, the logger monitors the LiPo battery voltage and will automatically close the log file when the battery voltage starts to fall.
 
-You can connect a "stop logging" push switch between the Adalogger A1 pin and GND. This switch is optional but pushing it will safely close the RAWX log file so you can
-unplug the power. If you unplug both USB and LiPo power while the logger is still logging, the RAWX log file will not get closed and you will lose your data!
+You can connect a "stop logging" push switch between the Adalogger A1 pin and GND. This switch is optional but pushing it will safely close the RAWX log file so you can unplug the power. If you unplug both USB and LiPo power while the logger is still logging, the RAWX log file will not get closed and you will lose your data!
+
+Note: In this Sky Horse version, pushing the Stop Logging momentary button closes the current log file and then opens a new file and starts logging data there. In the previous version, pushing the Stop Logging button simply closes the current log file and waits for a reset before logging again. We also set the stop_pressed boolean back to false so when it iterates back to the beginning it will log as if nothing happened.
+<code>
+if ((stop_pressed == true) or (vbat < LOWBAT)) {
+        //loop_step = close_file; // now close the file - commented out by Sky Horse
+        loop_step = restart_file; //close file and reopen new one - added by Sky Horse
+        stop_pressed = false; //custom Sky Horse
+        break;
+                                              </code>    
 
 ## Waypoint / Timestamp Event
 
