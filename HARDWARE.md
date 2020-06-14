@@ -85,13 +85,15 @@ You can connect a "stop logging" push switch between the Adalogger A1 pin and GN
 Note: In this Sky Horse version, pushing the Stop Logging momentary button closes the current log file and then opens a new file and starts logging data there. In the previous version, pushing the Stop Logging button simply closes the current log file and waits for a reset before logging again. We also set the stop_pressed boolean back to false so when it iterates back to the beginning it will log as if nothing happened.
 
 Update made to restart the logging after stop button pressed, if you'd like to just stop logging completely revert back to prior code:
+        ```
         if ((stop_pressed == true) or (vbat < LOWBAT)) {
           //loop_step = close_file; // now close the file - previous code commented out by Sky Horse
           loop_step = restart_file; //close file and reopen new one - added by Sky Horse
           stop_pressed = false; //custom Sky Horse
           break;
         }
-
+        ```
+        
 ## Waypoint / Timestamp Event
 
 You can connect a push switch between GND and the SparkFun INT pin. Pushing it will generate a TIM_TM2 message which will get logged with the RAWX data.
