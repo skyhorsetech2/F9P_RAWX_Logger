@@ -83,13 +83,13 @@ If you are powering the logger from a LiPo battery, the logger monitors the LiPo
 You can connect a "stop logging" push switch between the Adalogger A1 pin and GND. This switch is optional but pushing it will safely close the RAWX log file so you can unplug the power. If you unplug both USB and LiPo power while the logger is still logging, the RAWX log file will not get closed and you will lose your data!
 
 Note: In this Sky Horse version, pushing the Stop Logging momentary button closes the current log file and then opens a new file and starts logging data there. In the previous version, pushing the Stop Logging button simply closes the current log file and waits for a reset before logging again. We also set the stop_pressed boolean back to false so when it iterates back to the beginning it will log as if nothing happened.
-<code>
+
 if ((stop_pressed == true) or (vbat < LOWBAT)) {
         //loop_step = close_file; // now close the file - commented out by Sky Horse
         loop_step = restart_file; //close file and reopen new one - added by Sky Horse
         stop_pressed = false; //custom Sky Horse
         break;
-                                              </code>    
+                                              
 
 ## Waypoint / Timestamp Event
 
