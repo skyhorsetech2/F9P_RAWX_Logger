@@ -1,6 +1,6 @@
 # HARDWARE
 
-This guide describes how to connect the Adafruit Feather M0 Adalogger to the SparkFun GPS-RTK2 board to create the F9P_RAWX_Logger
+This guide describes how to connect the Adafruit Feather M0 Adalogger to the SparkFun GPS-RTK2 board to create the F9P_RAWX_Logger with optional LCD screen and/or Bluetooth Module.
 
 ## Adafruit Feather M0 Adalogger
 
