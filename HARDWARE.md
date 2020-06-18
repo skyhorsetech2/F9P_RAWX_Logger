@@ -77,7 +77,7 @@ when the ZED-F9P has established a TIME solution. The RTCM messages are output a
 
 Optional LCD screen - For the addition of an LCD screen (Sky Horse used SparkFun 20x4 SerLCD - Black on RGB 3.3V) you can connect using one of the two I2C ports. If your LCD screen does not have an existing I2C port you can solder one on like we did (SparkFun Qwiic Adapter). If using this option be sure you are using the RAWX_Logger_F9P_I2C_LCD.ino sketch. In that sketch you can update the background color by updating the lcd.setBacklight(0x00FFFF) entry using the hex color of your choice (0x00FFFF is cyan).
 
-![Extras](https://github.com/SkyHorseTech/F9P_RAWX_Logger/blob/master/img/ExtrasWithLCD_BT.jpg)
+![Extras](https://github.com/SkyHorseTech/F9P_RAWX_Logger/blob/master/img/ExtrasWithLCD_withBT.jpg)
 
 Optional Bluetooth Module - As seen in the diagram above, the addition of a bluetooth module can be facilitated on the UART2 ports. This allows the user to feed RTCM corrections through the BT module to UART2 which automatically processes those corrections. The BT module can be connected to a smart device (phone/tablet) running an app such as Lefebure NTRIP client, among others, where those corrections are pulled in from a cell or wi-fi connection.
 
