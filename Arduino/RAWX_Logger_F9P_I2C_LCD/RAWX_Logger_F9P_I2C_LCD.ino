@@ -620,7 +620,7 @@ void setup()
   
   //Begin custom Sky Horse
   lcd.begin(Wire);            //Set up the LCD for Serial communication at 9600bps
-  lcd.setBacklight(0x4B0082); //indigo, a kind of dark purplish blue
+  //lcd.setBacklight(0x4B0082); //indigo, a kind of dark purplish blue
   lcd.setBacklight(0x00FFFF); //cyan
   lcd.clear();
   lcd.print("LCD Ready");
