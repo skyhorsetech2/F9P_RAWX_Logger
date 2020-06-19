@@ -3,7 +3,7 @@
 
 A guide on how to assemble a GNSS PPK RAWX Logger from an [Adafruit Feather M0 Adalogger](https://www.adafruit.com/product/2796)
 and a [SparkFun GPS-RTK2 Board](https://www.sparkfun.com/products/15136) which incorporates the [u-blox ZED-F9P](https://www.u-blox.com/en/product/zed-f9p-module)
-dual band (L1 + L2) GNSS receiver. In this fork we show how to add an optional LCD screen and/or Bluetooth Module to channel inbound RTCM corrections to the rover ZED-F9P module.
+dual band (L1 + L2) GNSS receiver. In this Sky Horse Tech fork we show how to add an optional LCD screen and/or Bluetooth Module to channel inbound RTCM corrections to the rover ZED-F9P module.
 
 ![RAWX_Logger](https://github.com/PaulZC/F9P_RAWX_Logger/blob/master/img/RAWX_Logger.JPG)
 
