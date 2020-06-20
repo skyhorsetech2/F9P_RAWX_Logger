@@ -7,6 +7,8 @@ dual band (L1 + L2) GNSS receiver. In this Sky Horse Tech fork we show how to ad
 
 ![RAWX_Logger](https://github.com/PaulZC/F9P_RAWX_Logger/blob/master/img/RAWX_Logger.JPG)
 
+![RAWX_Logger](https://github.com/SkyHorseTech/F9P_RAWX_Logger/blob/master/img/SkyHorseRoverLoggerLCD.jpg)
+
 ![Connections](https://github.com/PaulZC/F9P_RAWX_Logger/blob/master/img/Connections.JPG)
 
 The RAWX files logged by this project can be processed using [rtklibexplorer's](https://rtklibexplorer.wordpress.com/)
