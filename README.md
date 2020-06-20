@@ -11,6 +11,8 @@ dual band (L1 + L2) GNSS receiver. In this Sky Horse Tech fork we show how to ad
 
 ![Connections](https://github.com/PaulZC/F9P_RAWX_Logger/blob/master/img/Connections.JPG)
 
+![RAWX_Logger](https://github.com/SkyHorseTech/F9P_RAWX_Logger/blob/master/img/ExtrasWithLCD_withBT.jpg)
+
 The RAWX files logged by this project can be processed using [rtklibexplorer's](https://rtklibexplorer.wordpress.com/)
 version of [RTKLIB](http://rtkexplorer.com/downloads/rtklib-code/)
 
